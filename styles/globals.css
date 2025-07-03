@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ↓ you can tweak or delete later */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-800 antialiased;
+}
+
+.dark body {
+  @apply bg-zinc-900 text-zinc-100;
+}
