@@ -1,19 +1,39 @@
-import { ReactNode } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { cn } from '@/lib/cn';
 
-type Props = { id?: string; className?: string; children: ReactNode };
+type Props = {
+  id?: string;
+  title: string;
+  icon: IconProp;
+  className?: string;
+  children: React.ReactNode;
+};
 
-export function Section({ id, className, children }: Props) {
+export default function Section({ id, title, icon, className, children }: Props) {
   return (
-    <section
-      id={id}
-      className={cn(
-        'w-full max-w-4xl mx-auto px-6 md:px-0',
-        'space-y-2 md:space-y-3',
-        className
-      )}
-    >
-      {children}
+    <section id={id} className={cn('', className)}>
+      {/* Header row */}
+      <div className="flex items-center gap-2">
+        {/* icon circle */}
+        <span
+          className="
+    inline-flex h-9 w-9 items-center justify-center mt-4
+    rounded-full bg-zinc-700 text-white
+  "
+        >
+          <FontAwesomeIcon icon={icon} />
+        </span>
+
+        {/* title */}
+        <h2 className="text-xl font-semibold">{title}</h2>
+      </div>
+
+      {/* accent line */}
+      <hr className=" h-1 w-full border-0 bg-zinc-700" />
+
+      {/* section content */}
+      <div className="mt-6">{children}</div>
     </section>
   );
 }

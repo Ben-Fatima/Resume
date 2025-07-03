@@ -1,4 +1,7 @@
+import MainSheet from '@/components/MainSheet';
+import Projects from '@/components/Projects';
 import Sidebar from '@/components/Sidebar';
+import TechSkills from '@/components/TechSkills';
 
 export default function Page() {
   return (
@@ -12,6 +15,9 @@ export default function Page() {
       "
       >
         <Sidebar />
+        <MainSheet />
+        <TechSkills />
+        <Projects />
       </div>
     </>
   );

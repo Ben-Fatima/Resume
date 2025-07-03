@@ -8,7 +8,16 @@ import {
   faStar,
   faGlobe,
   faChessKnight,
-  faRankingStar
+  faRankingStar,
+  faBuilding,
+  faGraduationCap,
+  faBriefcase,
+  faHammer,
+  faFlask, // Education
+  faToolbox, // Technical Skills
+  faFolderOpen, // Projects
+  faLanguage,
+  faCode
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -23,5 +32,14 @@ library.add(
   faLinkedin,
   faGlobe,
   faChessKnight,
-  faRankingStar
+  faRankingStar,
+  faBuilding,
+  faGraduationCap,
+  faBriefcase,
+  faHammer,
+  faFlask,
+  faToolbox,
+  faFolderOpen,
+  faLanguage,
+  faCode
 );
