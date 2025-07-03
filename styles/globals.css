@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ↓ you can tweak or delete later */
-html,
 body {
-  scroll-behavior: smooth;
+  @apply bg-white text-zinc-800 leading-relaxed antialiased;
 }
-
-body {
-  @apply bg-white text-zinc-800 antialiased;
-}
-
 .dark body {
   @apply bg-zinc-900 text-zinc-100;
+}
+
+/* typography hierarchy */
+h1 {
+  @apply text-3xl md:text-4xl font-bold;
+}
+h2 {
+  @apply text-xl font-semibold mt-8 mb-4;
+}
+h3 {
+  @apply font-medium;
+}
+.section-title {
+  @apply border-l-4 border-indigo-500 pl-3 text-xl font-semibold mt-8 mb-4;
 }

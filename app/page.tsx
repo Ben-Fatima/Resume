@@ -1,9 +1,18 @@
-export default function Home() {
+import Sidebar from '@/components/Sidebar';
+
+export default function Page() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold text-indigo-600 dark:text-amber-400">
-        Tailwind is live! 🎉
-      </h1>
-    </main>
+    <>
+      <div
+        className="
+        mx-auto w-[calc(100%-2rem)] max-w-[54rem] 
+        grid 
+        grid-cols-1
+        md:grid-cols-[18rem_1fr] 
+      "
+      >
+        <Sidebar />
+      </div>
+    </>
   );
 }
