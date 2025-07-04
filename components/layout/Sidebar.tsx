@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { ContactInfo } from '@/components/ContactInfo';
-import { Ranks } from '@/components/Ranks';
-import { Languages } from '@/components/Languages';
-import { ProgrammingTools } from '@/components/ProgrammingTools';
+import { ContactInfo } from '@/components/widgets/ContactInfo';
+import { Ranks } from '@/components/widgets/Ranks';
+import { Languages } from '@/components/widgets/Languages';
+import { ProgrammingTools } from '@/components/widgets/ProgrammingTools';
 
 export default function Sidebar() {
   return (

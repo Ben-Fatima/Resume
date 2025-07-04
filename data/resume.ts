@@ -209,7 +209,6 @@ export const resume = {
       description:
         'Reads vendor CSV/Excel files, cleans the data, and pushes updates to Magento, Shopify, or WooCommerce.',
       repo: 'https://github.com/Ben-Fatima/Databridge',
-      demo: 'https://databridge.dev',
       tech: ['Laravel 11', 'Vue 3', 'Docker', 'CI/CD', 'Pest', 'Tailwind CSS']
     },
     {

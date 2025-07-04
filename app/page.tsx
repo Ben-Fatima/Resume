@@ -1,24 +1,19 @@
-import MainSheet from '@/components/MainSheet';
-import Projects from '@/components/Projects';
-import Sidebar from '@/components/Sidebar';
-import TechSkills from '@/components/TechSkills';
+import MainColumn from '@/components/layout/MainColumn';
+import Sidebar from '@/components/layout/Sidebar';
+import { ThemeToggle } from '@/components/widgets/ThemeToggle';
 
 export default function Page() {
   return (
-    <>
-      <div
-        className="
-        mx-auto w-[calc(100%-2rem)] max-w-[54rem] 
-        grid 
-        grid-cols-1
-        md:grid-cols-[18rem_1fr] 
+    <div
+      className="
+        mx-auto w-[calc(100%-2rem)] max-w-[54rem]
+        grid gap-y-8 auto-rows-max
+        grid-cols-1 md:grid-cols-[18rem_1fr]
       "
-      >
-        <Sidebar />
-        <MainSheet />
-        <TechSkills />
-        <Projects />
-      </div>
-    </>
+    >
+      <ThemeToggle />
+      <Sidebar />
+      <MainColumn />
+    </div>
   );
 }
