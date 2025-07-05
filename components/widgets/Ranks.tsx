@@ -12,7 +12,7 @@ export function Ranks() {
   if (!ranks?.length) return null;
 
   return (
-    <section className="space-y-2">
+    <section className="space-y-2" id="ranks">
       <h3 className="border-b pb-1 text-sm font-semibold">Reputation / Ranks</h3>
 
       {ranks.map(({ label, value, url }) => {

@@ -6,7 +6,7 @@ import { ProgrammingTools } from '@/components/widgets/ProgrammingTools';
 
 export default function Sidebar() {
   return (
-    <aside className="space-y-8 p-6 text-sm top-12 bg-gray-100 dark:bg-gray-900">
+    <aside className="space-y-8 p-6 text-sm top-12 bg-zinc-100 dark:bg-gray-900">
       {/* photo */}
       <Image
         src="/file.svg"

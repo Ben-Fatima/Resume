@@ -44,7 +44,7 @@ export function ContactInfo() {
   const contact = resume.contact;
 
   return (
-    <section className="space-y-2">
+    <section className="space-y-2" id="contact">
       {(Object.keys(contact) as ContactKey[]).map((key) => (
         <p key={key} className="flex items-center gap-2">
           <FontAwesomeIcon icon={iconMap[key]} className="shrink-0" />

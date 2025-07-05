@@ -22,3 +22,124 @@ h3 {
 .section-title {
   @apply border-l-4 border-indigo-500 pl-3 text-xl font-semibold mt-8 mb-4;
 }
+
+@media print {
+  [data-hide-print='true'],
+  button[aria-label='Toggle dark mode'] {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: rgb(39 39 42) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .resume-grid {
+    display: grid !important;
+    grid-template-columns: 19rem 1fr !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 0 !important;
+  }
+
+  .resume-grid > aside {
+    grid-column: 1 / 2 !important;
+    height: 31.92cm !important;
+    margin: 0 !important;
+    padding: 10 !important;
+    break-inside: avoid;
+  }
+
+  .resume-grid > *:not(aside) {
+    grid-column: 2 / 3 !important;
+    break-inside: avoid;
+  }
+
+  #tech-skills {
+    margin: 20 !important;
+    grid-column: 1 / -1 !important;
+    break-before: page;
+    break-after: avoid;
+  }
+  #skill-title {
+    font-weight: 600 !important;
+  }
+
+  #experience {
+    padding-bottom: 15 !important;
+    padding-top: 15 !important;
+  }
+  #experience-title {
+    font-weight: 600 !important;
+  }
+
+  #experience-summary {
+    padding-bottom: 10 !important;
+    padding-top: 10 !important;
+  }
+  #education {
+    padding-bottom: 5 !important;
+    padding-top: 5 !important;
+    margin-top: 15 !important;
+  }
+
+  #contact {
+    padding-bottom: 10 !important;
+    padding-top: 20 !important;
+    padding-inline: 4 !important;
+  }
+
+  #ranks {
+    padding-bottom: 10 !important;
+    padding-top: 10 !important;
+    padding-inline: 4 !important;
+  }
+
+  #tools {
+    padding-bottom: 10 !important;
+    padding-top: 10 !important;
+    padding-inline: 4 !important;
+  }
+
+  #languages {
+    padding-bottom: 10 !important;
+    padding-top: 10 !important;
+    padding-inline: 4 !important;
+  }
+  #header-title {
+    margin-top: 20 !important;
+  }
+
+  #projects {
+    margin: 20 !important;
+    grid-column: 1 / -1 !important;
+    break-inside: avoid;
+  }
+
+  #project-card {
+    padding-bottom: 10 !important;
+    padding-top: 10 !important;
+  }
+
+  section {
+    margin: 0.45rem 0 !important;
+  }
+  article {
+    margin: 0 0 0.4rem !important;
+    padding: 0 0 0.4rem !important;
+    break-inside: avoid;
+  }
+  h2 {
+    margin: 0 0 0.25rem !important;
+  }
+
+  html {
+    zoom: 0.93;
+  }
+}

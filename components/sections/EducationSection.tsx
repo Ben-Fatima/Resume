@@ -6,14 +6,15 @@ export default function EducationSection() {
   if (!resume.education.length) return null;
 
   return (
-    <section>
+    <section id="educations">
       <SectionHeader title="Education" icon="graduation-cap" />
 
       {resume.education.map(({ start, end, school, degree, location }) => (
         <article
+          id="education"
           key={`${school}-${start}`}
           className="
-            mb-6 pb-6 border-b border-zinc-300/60 dark:border-zinc-600/40
+            mb-4 pb-4 border-b border-zinc-300/60 dark:border-zinc-600/40
             last:mb-0 last:border-none last:pb-0
           "
         >

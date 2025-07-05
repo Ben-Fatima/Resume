@@ -48,7 +48,7 @@ export const resume = {
     name: 'Fatima Zahra Benhammou',
     label: 'Software Engineer',
     summary:
-      'I’m a software engineer with a passion for performance tuning and knowledge-sharing. Currently bridging Magento & Laravel worlds.'
+      'I’m a software engineer interested in everything related to computer science, with a passion for clean code. I enjoy solving complex problems and optimizing code for performance.'
   },
 
   ranks: [
@@ -85,27 +85,28 @@ export const resume = {
       label: 'Languages',
       items: [
         { name: 'PHP', level: 90 },
-        { name: 'JavaScript', level: 80 },
-        { name: 'HTML/CSS', level: 90 },
-        { name: 'SQL', level: 75 },
+        { name: 'JavaScript', level: 70 },
+        { name: 'HTML/CSS', level: 70 },
+        { name: 'SQL', level: 80 },
         { name: 'Python', level: 60 }
       ]
     },
     {
       label: 'Frameworks',
       items: [
-        { name: 'Laravel', level: 90 },
+        { name: 'Laravel', level: 80 },
         { name: 'Magento', level: 80 },
+        { name: 'Adonis', level: 60 },
         { name: 'React', level: 60 },
         { name: 'Next', level: 60 },
-        { name: 'TailwindCSS', level: 72 }
+        { name: 'TailwindCSS', level: 60 }
       ]
     },
     {
       label: 'Tools',
       items: [
-        { name: 'Docker', level: 70 },
-        { name: 'Git', level: 20 }
+        { name: 'Docker', level: 80 },
+        { name: 'Git', level: 70 }
       ]
     }
   ],
@@ -116,7 +117,7 @@ export const resume = {
       title: 'Magento 2 Developer',
       start: '2022-03',
       summary:
-        'Designed and built an order-splitting module driven by a custom product attribute in Adobe Commerce (Magento 2).',
+        'Contribute to Magento-based e-commerce stores by developing reusable modules, integrating payment gateways and other third-party services, refactoring and optimizing code for faster performance, and handling daily maintenance and bug fixes to keep checkouts smooth and secure.',
       tech: ['PHP', 'Magento 2', 'MySQL', 'Docker', 'Git'],
       website: 'https://www.sqli.com'
     },

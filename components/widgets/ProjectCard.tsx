@@ -18,7 +18,7 @@ export default function ProjectCard({
   stage
 }: ProjectItem) {
   return (
-    <article className="mb-8">
+    <article className="mb-8" id="project-card">
       <h3 className="flex items-center gap-2 font-semibold">
         {name}
         {stage && (

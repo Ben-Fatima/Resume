@@ -5,7 +5,7 @@ export function Languages() {
   if (!langs?.length) return null;
 
   return (
-    <section className="space-y-2">
+    <section className="space-y-2" id="languages">
       <h3 className="border-b pb-1 text-sm font-semibold">Languages</h3>
 
       {langs.map(({ label, level }) => (

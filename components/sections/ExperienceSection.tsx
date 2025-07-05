@@ -15,11 +15,12 @@ function formatRange(start: string, end?: string) {
 
 export default function ExperienceSection() {
   return (
-    <section>
+    <section id="experiences">
       <SectionHeader title="Work Experience" icon="briefcase" />
 
       {resume.experience.map((exp) => (
         <article
+          id="experience"
           key={exp.company + exp.start}
           className="mb-6 border-b border-zinc-300/60 pb-6 last:border-none dark:border-zinc-600/40"
         >
@@ -37,8 +38,10 @@ export default function ExperienceSection() {
             <CompanyLogo company={exp.company} website={exp.website} />
 
             <div className="flex-1">
-              <p className="font-medium">{exp.title}</p>
-              <p>{exp.summary}</p>
+              <p className="font-medium" id="experience-title">
+                {exp.title}
+              </p>
+              <p id="experience-summary">{exp.summary}</p>
 
               <div className="mt-2 flex flex-wrap gap-2">
                 {exp.tech.map((t) => (

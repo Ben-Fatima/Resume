@@ -11,7 +11,7 @@ export function ProgrammingTools() {
   if (!categories?.length) return null;
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6" id="tools">
       <h3 className="border-b pb-1 text-sm font-semibold">Programming&nbsp;Tools</h3>
 
       {categories.map((cat) => (
