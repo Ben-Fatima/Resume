@@ -1,15 +1,21 @@
 import SectionHeader from '@/components/ui/SectionHeader';
 import Pill from '@/components/ui/Pill';
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 
-export default function TechSkillsSection() {
-  if (!resume.techSkills.length) return null;
+export default function TechSkillsSection({
+  skills,
+  title
+}: {
+  skills: Resume['techSkills'];
+  title: string;
+}) {
+  if (!skills.length) return null;
 
   return (
     <section className="col-span-full" id="tech-skills">
-      <SectionHeader title="Technical Skills" icon="code" />
+      <SectionHeader title={title} icon="code" />
 
-      {resume.techSkills.map(({ title, description, tags }) => (
+      {skills.map(({ title, description, tags }) => (
         <div
           key={title}
           className="mb-6 space-y-2 border-b border-zinc-300/60 pb-6 last:mb-0 last:border-none last:pb-0 dark:border-zinc-600/40"

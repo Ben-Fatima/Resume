@@ -1,8 +1,8 @@
 import SectionHeader from '@/components/ui/SectionHeader';
-import { resume } from '@/data/resume';
 import CompanyLogo from '@/components/widgets/CompanyLogo';
 import Pill from '@/components/ui/Pill';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Resume } from '@/data/types';
 
 function formatRange(start: string, end?: string) {
   const s = new Date(start);
@@ -13,12 +13,18 @@ function formatRange(start: string, end?: string) {
   return `${startTxt} – ${endTxt}`;
 }
 
-export default function ExperienceSection() {
+export default function ExperienceSection({
+  experience,
+  title
+}: {
+  experience: Resume['experience'];
+  title: string;
+}) {
   return (
     <section id="experiences">
-      <SectionHeader title="Work Experience" icon="briefcase" />
+      <SectionHeader title={title} icon="briefcase" />
 
-      {resume.experience.map((exp) => (
+      {experience.map((exp) => (
         <article
           id="experience"
           key={exp.company + exp.start}

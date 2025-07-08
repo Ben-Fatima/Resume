@@ -1,15 +1,21 @@
 import SectionHeader from '@/components/ui/SectionHeader';
 import ProjectCard from '@/components/widgets/ProjectCard';
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 
-export default function ProjectsSection() {
-  if (!resume.projects.length) return null;
+export default function ProjectsSection({
+  projects,
+  title
+}: {
+  projects: Resume['projects'];
+  title: string;
+}) {
+  if (!projects.length) return null;
 
   return (
     <section className="col-span-full" id="projects">
-      <SectionHeader title="Projects" icon="folder-open" />
+      <SectionHeader title={title} icon="folder-open" />
 
-      {resume.projects.map((project) => (
+      {projects.map((project) => (
         <div
           key={project.name}
           className="mb-4 border-b border-zinc-300/60 

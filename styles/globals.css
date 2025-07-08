@@ -28,6 +28,9 @@ h3 {
   button[aria-label='Toggle dark mode'] {
     display: none !important;
   }
+  .language-toggle {
+    display: none !important;
+  }
 
   html,
   body {

@@ -1,7 +1,6 @@
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 
-export function Languages() {
-  const langs = resume.languages;
+export function Languages({ langs }: { langs: Resume['languages'] }) {
   if (!langs?.length) return null;
 
   return (

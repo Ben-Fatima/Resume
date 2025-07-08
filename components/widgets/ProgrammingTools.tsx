@@ -1,4 +1,4 @@
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 
 function barColour(level: number) {
   if (level <= 30) return 'bg-red-500';
@@ -6,8 +6,8 @@ function barColour(level: number) {
   return 'bg-indigo-600';
 }
 
-export function ProgrammingTools() {
-  const categories = resume.tools;
+export function ProgrammingTools({ tools }: { tools: Resume['tools'] }) {
+  const categories = tools;
   if (!categories?.length) return null;
 
   return (

@@ -1,9 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { resume } from '@/data/resume';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { Resume } from '@/data/types';
 
-type ContactKey = keyof typeof resume.contact;
+/* ------------------------------------------------------------------ */
+/* 1 ▸ Derive the key type from the Resume interface                  */
+type Contact = Resume['contact'];
+type ContactKey = keyof Contact;
 
+/* 2 ▸ Central icon map (string tuple accepted by FontAwesomeIcon)    */
 const iconMap: Record<ContactKey, IconProp> = {
   location: 'location-dot',
   email: 'envelope',
@@ -13,42 +17,40 @@ const iconMap: Record<ContactKey, IconProp> = {
   linkedin: ['fab', 'linkedin']
 };
 
-function renderValue(key: ContactKey, value: string) {
-  switch (key) {
-    case 'email':
-      return (
-        <a href={`mailto:${value}`} className="underline">
-          {value}
-        </a>
-      );
-    case 'phone':
-      return (
-        <a href={`tel:${value.replace(/\s+/g, '')}`} className="underline">
-          {value}
-        </a>
-      );
-    case 'website':
-    case 'github':
-    case 'linkedin':
-      return (
-        <a href={value} target="_blank" rel="noopener noreferrer" className="underline">
-          {value.replace(/^https?:\/\//, '')}
-        </a>
-      );
-    default:
-      return value;
-  }
+/* 3 ▸ Render helper                                                  */
+function RenderValue({ k, v }: { k: ContactKey; v: string }) {
+  if (k === 'email')
+    return (
+      <a className="underline" href={`mailto:${v}`}>
+        {v}
+      </a>
+    );
+
+  if (k === 'phone')
+    return (
+      <a className="underline" href={`tel:${v.replace(/\s+/g, '')}`}>
+        {v}
+      </a>
+    );
+
+  if (k === 'website' || k === 'github' || k === 'linkedin')
+    return (
+      <a className="underline" target="_blank" rel="noopener noreferrer" href={v}>
+        {v.replace(/^https?:\/\//, '')}
+      </a>
+    );
+
+  return v;
 }
 
-export function ContactInfo() {
-  const contact = resume.contact;
-
+/* 4 ▸ Component                                                      */
+export default function ContactInfo({ contact }: { contact: Contact }) {
   return (
-    <section className="space-y-2" id="contact">
+    <section id="contact" className="space-y-2">
       {(Object.keys(contact) as ContactKey[]).map((key) => (
-        <p key={key} className="flex items-center gap-2">
+        <p className="flex items-center gap-2" key={key}>
           <FontAwesomeIcon icon={iconMap[key]} className="shrink-0" />
-          {renderValue(key, contact[key])}
+          <RenderValue k={key} v={contact[key]} />
         </p>
       ))}
     </section>

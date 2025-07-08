@@ -1,15 +1,21 @@
 import SectionHeader from '@/components/ui/SectionHeader';
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function EducationSection() {
-  if (!resume.education.length) return null;
+export default function EducationSection({
+  education,
+  title
+}: {
+  education: Resume['education'];
+  title: string;
+}) {
+  if (!education.length) return null;
 
   return (
     <section id="educations">
-      <SectionHeader title="Education" icon="graduation-cap" />
+      <SectionHeader title={title} icon="graduation-cap" />
 
-      {resume.education.map(({ start, end, school, degree, location }) => (
+      {education.map(({ start, end, school, degree, location }) => (
         <article
           id="education"
           key={`${school}-${start}`}

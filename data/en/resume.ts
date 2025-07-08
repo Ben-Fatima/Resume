@@ -1,49 +1,20 @@
-export type Language = {
-  label: string;
-  level: string;
-};
-
-export type ToolCategory = {
-  label: string;
-  items: { name: string; level: number }[];
-};
-
-export type ExperienceItem = {
-  company: string;
-  title: string;
-  start: string;
-  end?: string;
-  summary: string;
-  tech: string[];
-  website?: string;
-};
-
-export type EducationItem = {
-  start: string;
-  end: string;
-  school: string;
-  degree: string;
-  location: string;
-};
-
-export type SkillGroup = {
-  title: string;
-  description: string;
-  tags: string[];
-};
-
-export type Stage = 'WIP' | 'α';
-
-export type ProjectItem = {
-  name: string;
-  description: string;
-  tech: string[];
-  repo?: string;
-  demo?: string;
-  stage?: Stage;
-};
+import {
+  EducationItem,
+  ExperienceItem,
+  Language,
+  ProjectItem,
+  Resume,
+  SkillGroup,
+  ToolCategory
+} from '../types';
 
 export const resume = {
+  labels: {
+    experience: 'Work Experience',
+    education: 'Education',
+    skills: 'Technical Skills',
+    projects: 'Projects'
+  },
   basics: {
     name: 'Fatima Zahra Benhammou',
     label: 'Software Engineer',
@@ -244,4 +215,4 @@ export const resume = {
       tech: ['Python', 'Flask', 'Algorithms']
     }
   ]
-};
+} satisfies Resume;

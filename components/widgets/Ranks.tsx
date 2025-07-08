@@ -1,14 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { resume } from '@/data/resume';
+import { Resume } from '@/data/types';
 
 const rankIcons: Record<string, React.ComponentProps<typeof FontAwesomeIcon>['icon']> = {
   chess: ['fas', 'chess-knight'],
   codeforces: 'ranking-star'
 };
 
-export function Ranks() {
-  const ranks = resume.ranks;
-
+export function Ranks({ ranks }: { ranks: Resume['ranks'] }) {
   if (!ranks?.length) return null;
 
   return (
@@ -16,7 +14,7 @@ export function Ranks() {
       <h3 className="border-b pb-1 text-sm font-semibold">Reputation / Ranks</h3>
 
       {ranks.map(({ label, value, url }) => {
-        const key = label.toLowerCase().split('.')[0]; // "Chess.com" → "chess"
+        const key = label.toLowerCase().split('.')[0];
         const icon = rankIcons[key] ?? 'star';
 
         const line = (

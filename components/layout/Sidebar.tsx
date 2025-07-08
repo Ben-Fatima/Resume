@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { ContactInfo } from '@/components/widgets/ContactInfo';
+import ContactInfo from '@/components/widgets/ContactInfo';
 import { Ranks } from '@/components/widgets/Ranks';
 import { Languages } from '@/components/widgets/Languages';
 import { ProgrammingTools } from '@/components/widgets/ProgrammingTools';
+import { Resume } from '@/data/types';
 
-export default function Sidebar() {
+export default function Sidebar({ resume }: { resume: Resume }) {
   return (
     <aside className="space-y-8 p-6 text-sm top-12 bg-zinc-100 dark:bg-gray-900">
       {/* photo */}
@@ -17,16 +18,16 @@ export default function Sidebar() {
       />
 
       {/* contact */}
-      <ContactInfo />
+      <ContactInfo contact={resume.contact} />
 
-      {/* Ranks */}
-      <Ranks />
+      {/* ranks */}
+      <Ranks ranks={resume.ranks} />
 
-      {/* Programming Tools */}
-      <ProgrammingTools />
+      {/* dev tools */}
+      <ProgrammingTools tools={resume.tools} />
 
-      {/* Languages */}
-      <Languages />
+      {/* languages */}
+      <Languages langs={resume.languages} />
     </aside>
   );
 }

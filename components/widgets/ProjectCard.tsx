@@ -1,13 +1,31 @@
-import type { ProjectItem } from '@/data/resume';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHammer, faFlask } from '@fortawesome/free-solid-svg-icons';
-import type { Stage } from '@/data/resume';
+import { faHammer, faFlask, faStar } from '@fortawesome/free-solid-svg-icons';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const stageIcons: Record<Stage, IconProp> = {
+import type { ProjectItem, Stage } from '@/data/types';
+
+const stageIcons = {
   WIP: faHammer,
   α: faFlask
-};
+} satisfies Record<Stage, IconProp>;
+
+function Links({ repo, demo }: { repo?: string; demo?: string }) {
+  if (!repo && !demo) return null;
+  return (
+    <div className="mt-2 space-x-4 text-sm underline decoration-dotted">
+      {repo && (
+        <a href={repo} target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      )}
+      {demo && (
+        <a href={demo} target="_blank" rel="noopener noreferrer">
+          Demo
+        </a>
+      )}
+    </div>
+  );
+}
 
 export default function ProjectCard({
   name,
@@ -18,18 +36,12 @@ export default function ProjectCard({
   stage
 }: ProjectItem) {
   return (
-    <article className="mb-8" id="project-card">
+    <article id="project-card" className="mb-8">
       <h3 className="flex items-center gap-2 font-semibold">
         {name}
         {stage && (
-          <span
-            className="
-              flex items-center gap-1
-              rounded bg-zinc-300 px-1.5 py-0.5 text-[10px] uppercase tracking-wide
-              dark:bg-zinc-700
-            "
-          >
-            <FontAwesomeIcon icon={stageIcons[stage] || 'star'} className="text-[11px]" />
+          <span className="flex items-center gap-1 rounded bg-zinc-300 px-1.5 py-0.5 text-[10px] uppercase tracking-wide dark:bg-zinc-700">
+            <FontAwesomeIcon icon={stageIcons[stage] ?? faStar} className="text-[11px]" />
             {stage}
           </span>
         )}
@@ -37,7 +49,6 @@ export default function ProjectCard({
 
       <p className="mt-1 text-sm">{description}</p>
 
-      {/* tech tags */}
       <ul className="mt-2 flex flex-wrap gap-2">
         {tech.map((t) => (
           <li
@@ -49,21 +60,7 @@ export default function ProjectCard({
         ))}
       </ul>
 
-      {/* links */}
-      {(repo || demo) && (
-        <div className="mt-2 space-x-4 text-sm underline decoration-dotted">
-          {repo && (
-            <a href={repo} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          )}
-          {demo && (
-            <a href={demo} target="_blank" rel="noopener noreferrer">
-              Demo
-            </a>
-          )}
-        </div>
-      )}
+      <Links repo={repo} demo={demo} />
     </article>
   );
 }
