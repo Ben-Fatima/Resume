@@ -18,8 +18,7 @@ export const resume = {
   basics: {
     name: 'Fatima Zahra Benhammou',
     label: 'Software Engineer',
-    summary:
-      'I’m a software engineer interested in everything related to computer science, with a passion for clean code. I enjoy solving complex problems and optimizing code for performance.'
+    summary: `Software engineer who converts complex requirements into clean, high-performance code across the full stack. Passionate about readable architecture, query optimisation, and delivering maintainable features.`
   },
 
   ranks: [
@@ -85,11 +84,11 @@ export const resume = {
   experience: <ExperienceItem[]>[
     {
       company: 'SQLI Morocco',
-      title: 'Magento 2 Developer',
+      title: 'PHP/Magento2 Developer',
       start: '2022-03',
       summary:
-        'Contribute to Magento-based e-commerce stores by developing reusable modules, integrating payment gateways and other third-party services, refactoring and optimizing code for faster performance, and handling daily maintenance and bug fixes to keep checkouts smooth and secure.',
-      tech: ['PHP', 'Magento 2', 'MySQL', 'Docker', 'Git'],
+        'Built and refactored reusable modules for high-traffic web applications, integrated third-party services, cut load times, and ensured smooth user flows through proactive maintenance.',
+      tech: ['PHP', 'Magento 2', 'SQL', 'Javascript', 'Docker', 'Git'],
       website: 'https://www.sqli.com'
     },
     {
@@ -98,16 +97,16 @@ export const resume = {
       start: '2021-07',
       end: '2021-09',
       summary:
-        'Created an information system to track payment deadlines, invoices, suppliers and chassis data for an auto-parts retailer.',
+        'Delivered an internal system that tracks invoices, supplier accounts, payment deadlines, and chassis data, replacing manual spreadsheets and speeding up look-ups.',
       tech: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS']
     },
     {
       company: 'Mahkamaty · Internship',
-      title: 'Software Engineer Intern',
+      title: 'Full-Stack Developer Intern',
       start: '2020-07',
       end: '2020-08',
       summary:
-        'Built a predictive-analytics web app that forecasts future site metrics (visits, responses, questions, users).',
+        'Created a predictive-analytics dashboard that forecasts site visits, user questions, and response rates, giving managers early insight into growth trends.',
       tech: ['React', 'Redux', 'Node.js', 'Tailwind CSS'],
       website: 'https://mahkamaty.com'
     }
@@ -118,21 +117,21 @@ export const resume = {
       start: '2019',
       end: '2022',
       school: 'National School of Computer Science and Systems Analysis (ENSIAS)',
-      degree: 'Engineering Cycle, e-Logistics track',
+      degree: 'Engineering Cycle (smart supply chain and Logistics)',
       location: 'Rabat, Morocco'
     },
     {
       start: '2017',
       end: '2019',
       school: 'Al Khawarizmi Preparatory Classes (CPGE)',
-      degree: 'Mathematics & Physics (MP) stream',
+      degree: 'Preparatory Classes – Maths/Physics (MP)',
       location: 'Rabat, Morocco'
     },
     {
       start: '2016',
       end: '2017',
       school: 'Moulay Rachid High School',
-      degree: 'Baccalaureate, Mathematics A',
+      degree: 'Baccalaureate, Mathematics Option',
       location: 'Erfoud, Morocco'
     }
   ],
