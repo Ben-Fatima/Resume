@@ -9,9 +9,14 @@ import fs from 'node:fs';
 import chromium from '@sparticuz/chromium';
 import puppeteerCore from 'puppeteer-core';
 
+/* ——— Lambda settings ——— */
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-export const config = { maxDuration: 30, memory: 512 };
+export const config = {
+  maxDuration: 30,
+  memory: 512,
+  unstable_includeFiles: ['node_modules/@sparticuz/chromium/bin/**']
+};
 
 function exists(p: string | undefined): p is string {
   return typeof p === 'string' && fs.existsSync(p);

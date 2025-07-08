@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+/** @type {NextConfig} */
+const nextConfig = {
+  output: 'standalone',
 
-const nextConfig: NextConfig = {
-  /* config options here */
+  outputFileTracingIncludes: {
+    '/app/api/pdf': ['./node_modules/@sparticuz/chromium/bin/**']
+  },
+  serverExternalPackages: ['@sparticuz/chromium', 'puppeteer-core']
 };
 
 export default nextConfig;

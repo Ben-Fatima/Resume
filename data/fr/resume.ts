@@ -71,7 +71,7 @@ export const resume = {
         { name: 'Magento', level: 80 },
         { name: 'Adonis', level: 60 },
         { name: 'React', level: 60 },
-        { name: 'Next', level: 60 },
+        { name: 'Next', level: 40 },
         { name: 'TailwindCSS', level: 60 }
       ]
     },
@@ -152,6 +152,7 @@ export const resume = {
         'Laravel 11',
         'PHP 8',
         'TypeScript',
+        'React.js',
         'Next.js',
         'Vue 3',
         'Tailwind CSS',
