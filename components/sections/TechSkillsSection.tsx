@@ -12,7 +12,7 @@ export default function TechSkillsSection({
   if (!skills.length) return null;
 
   return (
-    <section className="col-span-full" id="tech-skills">
+    <div className="col-span-full px-4" id="tech-skills">
       <SectionHeader title={title} icon="code" />
 
       {skills.map(({ title, description, tags }) => (
@@ -32,6 +32,6 @@ export default function TechSkillsSection({
           </ul>
         </div>
       ))}
-    </section>
+    </div>
   );
 }

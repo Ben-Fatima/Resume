@@ -12,7 +12,7 @@ export default function ProjectsSection({
   if (!projects.length) return null;
 
   return (
-    <section className="col-span-full" id="projects">
+    <div className="col-span-full px-4" id="projects">
       <SectionHeader title={title} icon="folder-open" />
 
       {projects.map((project) => (
@@ -25,6 +25,6 @@ export default function ProjectsSection({
           <ProjectCard {...project} />
         </div>
       ))}
-    </section>
+    </div>
   );
 }

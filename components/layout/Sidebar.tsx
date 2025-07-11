@@ -10,7 +10,7 @@ export default function Sidebar({ resume }: { resume: Resume }) {
     <aside className="space-y-8 p-6 text-sm top-12 bg-zinc-100 dark:bg-gray-900">
       {/* photo */}
       <Image
-        src="/file.svg"
+        src="/Fatimazahra.png"
         width={140}
         height={140}
         alt="#"
