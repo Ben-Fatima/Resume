@@ -65,6 +65,7 @@ export const resume = {
       label: 'Frameworks',
       items: [
         { name: 'Laravel', level: 80 },
+        { name: 'Lumen', level: 80 },
         { name: 'Magento', level: 80 },
         { name: 'Adonis', level: 60 },
         { name: 'React', level: 60 },
@@ -86,6 +87,7 @@ export const resume = {
       company: 'SQLI Morocco',
       title: 'PHP/Magento2 Developer',
       start: '2022-03',
+      end: '2025-09',
       summary:
         'Built and refactored reusable modules for high-traffic web applications, integrated third-party services, cut load times, and ensured smooth user flows through proactive maintenance.',
       tech: ['PHP', 'Magento 2', 'SQL', 'Javascript', 'Docker', 'Git'],
@@ -176,20 +178,37 @@ export const resume = {
 
   projects: <ProjectItem[]>[
     {
-      name: 'DataBridge',
-      stage: 'WIP', // in progress
+      name: 'Skill-Up (Framework)',
+      stage: 'WIP', // ongoing framework
       description:
-        'Reads vendor CSV/Excel files, cleans the data, and pushes updates to Magento, Shopify, or WooCommerce.',
-      repo: 'https://github.com/Ben-Fatima/Databridge',
-      tech: ['Laravel 11', 'Vue 3', 'Docker', 'CI/CD', 'Pest', 'Tailwind CSS']
+        'A structured “level-up” framework of small, practical projects to master backend fundamentals. Includes shipped exercises (HTTP/CORS, sessions/cookies auth mini-app, WebSocket open chat) and larger projects (FileImporter, Inventory API + CLI).',
+      repo: 'https://github.com/Ben-Fatima/skill-up',
+      tech: ['PHP', 'Javascript', 'SQL', 'Lumen', 'REST', 'CLI', 'WebSockets']
     },
     {
-      name: 'Codeforces Tracker',
-      stage: 'WIP', // in progress
+      name: 'FileImporter (Skill-Up Project 1)',
+      stage: 'Done',
       description:
-        'Web app that will display Codeforces rating history and contest stats for any handle.',
-      repo: 'https://github.com/Ben-Fatima/codeforces-tracker',
-      tech: ['Laravel 11', 'Scheduler', 'Javascript', 'Tailwind CSS', 'Pest']
+        'Imports a large CSV (500MB+) into SQLite using a streaming approach. Includes a web UI with chunked uploads (~10MB parts), async import execution, live progress polling, and an actionable error report for failed rows.',
+      repo: 'https://github.com/Ben-Fatima/skill-up/tree/file-importer',
+      tech: [
+        'PHP (Vanilla)',
+        'SQLite',
+        'Composer (PSR-4)',
+        'Filesystem',
+        'Chunked Upload',
+        'Progress Polling',
+        'Tailwind CSS',
+        'Vanilla JS'
+      ]
+    },
+    {
+      name: 'Inventory REST API + CLI (Skill-Up Project 2)',
+      stage: 'WIP',
+      description:
+        'Multi-location inventory system where stock is derived from movements (IN/OUT/ADJUST). REST API (Lumen) plus a PHP CLI client that consumes the API to manage products, locations, and stock movements.',
+      repo: 'https://github.com/Ben-Fatima/skill-up',
+      tech: ['Lumen', 'PHP', 'REST API', 'CLI', 'SQLite']
     },
     {
       name: 'Portfolio Site',
@@ -199,20 +218,6 @@ export const resume = {
       repo: 'https://github.com/Ben-Fatima/Portfolio',
       demo: 'https://www.fatimazahra.dev',
       tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel Deploy']
-    },
-    {
-      name: 'shipIt',
-      description:
-        'Laravel starter kit with auth, Tailwind UI, tests, and GitHub Actions CI.',
-      repo: 'https://github.com/Ben-Fatima/shipIt',
-      tech: ['Laravel 8', 'Tailwind CSS', 'PHPUnit', 'CI/CD']
-    },
-    {
-      name: 'Job-Shop Scheduling Demo',
-      description:
-        'Flask demo that calculates an optimal job order for the classic scheduling problem.',
-      repo: 'https://github.com/Ben-Fatima/jobShopScheduling',
-      tech: ['Python', 'Flask', 'Algorithms']
     }
   ]
 } satisfies Resume;
