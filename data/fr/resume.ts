@@ -68,6 +68,7 @@ export const resume = {
       label: 'Frameworks',
       items: [
         { name: 'Laravel', level: 80 },
+        { name: 'Lumen', level: 80 },
         { name: 'Magento', level: 80 },
         { name: 'Adonis', level: 60 },
         { name: 'React', level: 60 },
@@ -90,6 +91,7 @@ export const resume = {
       company: 'SQLI Maroc',
       title: 'Développeuse PHP/Magento2',
       start: '2022-03',
+      end: '2025-09',
       summary:
         'Conçu et refondu des modules réutilisables pour des applications web à fort trafic, intégré des services tiers, réduit les temps de chargement et assuré des parcours utilisateurs fluides grâce à une maintenance proactive.',
       tech: ['PHP', 'Magento 2', 'SQL', 'JavaScript', 'Docker', 'Git'],
@@ -184,43 +186,46 @@ export const resume = {
   /* ───── Projets ───── */
   projects: <ProjectItem[]>[
     {
-      name: 'DataBridge',
-      stage: 'WIP' as Stage,
+      name: 'Skill-Up (Framework)',
+      stage: 'WIP' as Stage, // framework en cours
       description:
-        'Lit des fichiers CSV/Excel fournisseurs, nettoie les données et pousse les mises à jour vers Magento, Shopify ou WooCommerce.',
-      repo: 'https://github.com/Ben-Fatima/Databridge',
-      tech: ['Laravel 11', 'Vue 3', 'Docker', 'CI/CD', 'Pest', 'Tailwind CSS']
+        'Framework structuré de “level-up” basé sur de petits projets pratiques pour maîtriser les fondamentaux backend. Inclut des exercices livrés (HTTP/CORS, mini-app auth sessions/cookies, WebSocket open chat) et des projets plus larges (FileImporter, Inventory API + CLI).',
+      repo: 'https://github.com/Ben-Fatima/skill-up',
+      tech: ['PHP', 'JavaScript', 'SQL', 'Lumen', 'REST', 'CLI', 'WebSockets']
     },
     {
-      name: 'Codeforces Tracker',
+      name: 'FileImporter (Skill-Up Project 1)',
+      stage: 'Done' as Stage,
+      description:
+        'Importe un gros CSV (500MB+) vers SQLite en streaming. Inclut une UI web avec upload par chunks (~10MB), exécution d’import asynchrone, suivi de progression (polling) et rapport d’erreurs actionnable pour les lignes invalides.',
+      repo: 'https://github.com/Ben-Fatima/skill-up/tree/file-importer',
+      tech: [
+        'PHP (Vanilla)',
+        'SQLite',
+        'Composer (PSR-4)',
+        'Filesystem',
+        'Chunked Upload',
+        'Progress Polling',
+        'Tailwind CSS',
+        'Vanilla JS'
+      ]
+    },
+    {
+      name: 'Inventory REST API + CLI (Skill-Up Project 2)',
       stage: 'WIP' as Stage,
       description:
-        'Application web affichant l’historique de rating et les statistiques de concours Codeforces pour tout handle.',
-      repo: 'https://github.com/Ben-Fatima/codeforces-tracker',
-      tech: ['Laravel 11', 'Scheduler', 'JavaScript', 'Tailwind CSS', 'Pest']
+        'Système d’inventaire multi-emplacements où le stock est dérivé des mouvements (IN/OUT/ADJUST). API REST (Lumen) + client CLI PHP consommant l’API pour gérer produits, emplacements et mouvements de stock.',
+      repo: 'https://github.com/Ben-Fatima/skill-up',
+      tech: ['Lumen', 'PHP', 'REST API', 'CLI', 'SQLite']
     },
     {
       name: 'Site Portfolio',
-      stage: 'α' as Stage,
+      stage: 'α' as Stage, // alpha
       description:
         'Portfolio personnel réalisé avec Next.js et Tailwind CSS (fatimazahra.dev).',
       repo: 'https://github.com/Ben-Fatima/Portfolio',
       demo: 'https://www.fatimazahra.dev',
       tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel Deploy']
-    },
-    {
-      name: 'shipIt',
-      description:
-        'Kit de démarrage Laravel avec authentification, UI Tailwind, tests et CI GitHub Actions.',
-      repo: 'https://github.com/Ben-Fatima/shipIt',
-      tech: ['Laravel 8', 'Tailwind CSS', 'PHPUnit', 'CI/CD']
-    },
-    {
-      name: 'Job-Shop Scheduling Demo',
-      description:
-        'Démo Flask calculant l’ordre optimal de tâches pour le problème classique de Job-Shop.',
-      repo: 'https://github.com/Ben-Fatima/jobShopScheduling',
-      tech: ['Python', 'Flask', 'Algorithms']
     }
   ]
 } satisfies Resume;
