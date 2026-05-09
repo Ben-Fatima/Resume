@@ -12,11 +12,9 @@ import puppeteerCore from 'puppeteer-core';
 /* ——— Lambda settings ——— */
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-export const config = {
-  maxDuration: 30,
-  memory: 512,
-  unstable_includeFiles: ['node_modules/@sparticuz/chromium/bin/**']
-};
+export const maxDuration = 30;
+export const memory = 512;
+export const unstable_includeFiles = ['node_modules/@sparticuz/chromium/bin/**'];
 
 function exists(p: string | undefined): p is string {
   return typeof p === 'string' && fs.existsSync(p);
@@ -83,7 +81,7 @@ export async function GET(req: NextRequest) {
       margin: { top: 0, right: 0, bottom: 0, left: 0 }
     });
 
-    return new Response(pdf, {
+    return new Response(pdf.buffer as ArrayBuffer, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `inline; filename="FatimaZahra_Benhamou_CV_${lang}.pdf"`

@@ -84,6 +84,14 @@ export const resume = {
 
   experience: <ExperienceItem[]>[
     {
+      company: 'Viveris Technologies',
+      title: 'Software Engineer',
+      start: '2026-03',
+      end: null,
+      summary: 'Backend developer specializing in PHP, building and maintaining scalable web applications. Focused on performance optimization, bug resolution, and cross-functional collaboration to drive continuous delivery and improvement.',
+      tech: ['PHP', 'SQL', 'Git', 'Azure Devops']
+    },
+    {
       company: 'SQLI Morocco',
       title: 'PHP/Magento2 Developer',
       start: '2022-03',
@@ -101,16 +109,6 @@ export const resume = {
       summary:
         'Delivered an internal system that tracks invoices, supplier accounts, payment deadlines, and chassis data, replacing manual spreadsheets and speeding up look-ups.',
       tech: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS']
-    },
-    {
-      company: 'Mahkamaty · Internship',
-      title: 'Full-Stack Developer Intern',
-      start: '2020-07',
-      end: '2020-08',
-      summary:
-        'Created a predictive-analytics dashboard that forecasts site visits, user questions, and response rates, giving managers early insight into growth trends.',
-      tech: ['React', 'Redux', 'Node.js', 'Tailwind CSS'],
-      website: 'https://mahkamaty.com'
     }
   ],
 

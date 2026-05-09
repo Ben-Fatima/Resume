@@ -88,6 +88,14 @@ export const resume = {
   /* ───── Expérience ───── */
   experience: <ExperienceItem[]>[
     {
+      company: 'Viveris Technologies',
+      title: 'Ingénieure Logiciel',
+      start: '2026-03',
+      end: null,
+      summary: 'Développeuse backend spécialisée en PHP, concevant et maintenant des applications web évolutives. Axée sur l\'optimisation des performances, la résolution de bugs et la collaboration transversale pour assurer une livraison continue et l\'amélioration continue.',
+      tech: ['PHP', 'SQL', 'Git', 'Azure Devops']
+    },
+    {
       company: 'SQLI Maroc',
       title: 'Développeuse PHP/Magento2',
       start: '2022-03',
@@ -105,16 +113,6 @@ export const resume = {
       summary:
         'Mis en place d’un système interne suivant factures, fournisseurs, échéances et données de châssis, remplaçant les tableurs manuels et accélérant les recherches.',
       tech: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS']
-    },
-    {
-      company: 'Mahkamaty · Stage',
-      title: 'Stagiaire Développeuse Full-Stack',
-      start: '2020-07',
-      end: '2020-08',
-      summary:
-        'Créé un tableau de bord analytique prédictif anticipant les visites, questions et taux de réponse, offrant aux managers une vision précoce des tendances de croissance.',
-      tech: ['React', 'Redux', 'Node.js', 'Tailwind CSS'],
-      website: 'https://mahkamaty.com'
     }
   ],
 
