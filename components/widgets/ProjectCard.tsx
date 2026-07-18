@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHammer, faFlask, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHammer, faFlask, faCheck, faStar } from '@fortawesome/free-solid-svg-icons';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import type { ProjectItem, Stage } from '@/data/types';
 
 const stageIcons = {
   WIP: faHammer,
-  α: faFlask
+  α: faFlask,
+  Done: faCheck
 } satisfies Record<Stage, IconProp>;
 
 function Links({ repo, demo }: { repo?: string; demo?: string }) {
@@ -36,7 +37,7 @@ export default function ProjectCard({
   stage
 }: ProjectItem) {
   return (
-    <article id="project-card" className="mb-8">
+    <article id="project-card" className="mb-3">
       <h3 className="flex items-center gap-2 font-semibold">
         {name}
         {stage && (
@@ -49,7 +50,7 @@ export default function ProjectCard({
 
       <p className="mt-1 text-sm">{description}</p>
 
-      <ul className="mt-2 flex flex-wrap gap-2">
+      <ul className="mt-1.5 flex flex-wrap gap-2">
         {tech.map((t) => (
           <li
             key={t}

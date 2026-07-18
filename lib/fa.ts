@@ -13,6 +13,7 @@ import {
   faGraduationCap,
   faBriefcase,
   faHammer,
+  faCheck,
   faFlask, // Education
   faToolbox, // Technical Skills
   faFolderOpen, // Projects
@@ -37,6 +38,7 @@ library.add(
   faGraduationCap,
   faBriefcase,
   faHammer,
+  faCheck,
   faFlask,
   faToolbox,
   faFolderOpen,

@@ -1,12 +1,4 @@
-import {
-  EducationItem,
-  ExperienceItem,
-  Language,
-  ProjectItem,
-  Resume,
-  SkillGroup,
-  ToolCategory
-} from '../types';
+import { Resume } from '../types';
 
 export const resume = {
   labels: {
@@ -17,23 +9,10 @@ export const resume = {
   },
   basics: {
     name: 'Fatima Zahra Benhammou',
-    label: 'Software Engineer',
-    summary: `Software engineer who converts complex requirements into clean, high-performance code across the full stack. Passionate about readable architecture, query optimisation, and delivering maintainable features.`
+    label: 'Backend Software Engineer',
+    summary:
+      'Backend Software Engineer with 4+ years of PHP experience turning complex requirements into maintainable, high-performance systems, focused on clean architecture, query optimization, and production-ready code.'
   },
-
-  ranks: [
-    {
-      label: 'Chess.com',
-      value: '800 rapid',
-      url: 'https://www.chess.com/member/oressama'
-    },
-
-    {
-      label: 'Codeforces',
-      value: 1012,
-      url: 'https://codeforces.com/profile/Ta-mo'
-    }
-  ],
 
   contact: {
     location: 'Rabat, Morocco',
@@ -44,75 +23,80 @@ export const resume = {
     linkedin: 'https://www.linkedin.com/in/fzbenhammou/'
   },
 
-  languages: <Language[]>[
+  languages: [
     { label: 'Arabic', level: 'Native' },
     { label: 'English', level: 'Fluent' },
     { label: 'French', level: 'Fluent' }
   ],
 
-  tools: <ToolCategory[]>[
+  tools: [
     {
-      label: 'Languages',
+      label: 'Backend',
       items: [
         { name: 'PHP', level: 90 },
-        { name: 'JavaScript', level: 70 },
-        { name: 'HTML/CSS', level: 70 },
-        { name: 'SQL', level: 80 },
-        { name: 'Python', level: 60 }
-      ]
-    },
-    {
-      label: 'Frameworks',
-      items: [
         { name: 'Laravel', level: 80 },
         { name: 'Lumen', level: 80 },
-        { name: 'Magento', level: 80 },
-        { name: 'Adonis', level: 60 },
-        { name: 'React', level: 60 },
-        { name: 'Next', level: 40 },
-        { name: 'TailwindCSS', level: 60 }
+        { name: 'Magento 2', level: 85 },
+        { name: 'SQL', level: 85 },
+        { name: 'REST APIs', level: 85 },
+        { name: 'Redis', level: 75 },
+        { name: 'PHPUnit', level: 80 },
+        { name: 'Pest', level: 70 }
       ]
     },
     {
-      label: 'Tools',
+      label: 'Frontend',
+      items: [
+        { name: 'JavaScript', level: 80 },
+        { name: 'React', level: 60 },
+        { name: 'Angular', level: 50 },
+        { name: 'TailwindCSS', level: 70 },
+        { name: 'HTML/CSS', level: 80 }
+      ]
+    },
+    {
+      label: 'Dev Tools',
       items: [
         { name: 'Docker', level: 80 },
-        { name: 'Git', level: 70 }
+        { name: 'Git', level: 80 },
+        { name: 'Azure DevOps', level: 80 },
+        { name: 'Composer', level: 85 },
+        { name: 'Nginx', level: 75 }
       ]
     }
   ],
 
-  experience: <ExperienceItem[]>[
+  experience: [
     {
       company: 'Viveris Technologies',
-      title: 'Software Engineer',
+      title: 'Backend Software Engineer',
       start: '2026-03',
-      end: null,
-      summary: 'Backend developer specializing in PHP, building and maintaining scalable web applications. Focused on performance optimization, bug resolution, and cross-functional collaboration to drive continuous delivery and improvement.',
-      tech: ['PHP', 'SQL', 'Git', 'Azure Devops']
+      summary:
+        'Builds and maintains business-critical PHP applications. Implements backend features, resolves production issues and optimizes SQL queries in collaboration with QA and frontend teams.',
+      tech: ['PHP', 'SQL', 'REST APIs', 'Azure DevOps', 'Git']
     },
     {
       company: 'SQLI Morocco',
-      title: 'PHP/Magento2 Developer',
+      title: 'PHP Backend Developer',
       start: '2022-03',
       end: '2025-09',
       summary:
-        'Built and refactored reusable modules for high-traffic web applications, integrated third-party services, cut load times, and ensured smooth user flows through proactive maintenance.',
-      tech: ['PHP', 'Magento 2', 'SQL', 'Javascript', 'Docker', 'Git'],
+        'Built and maintained custom Magento 2 backend modules for enterprise e-commerce platforms across multiple client projects. Implemented business features and third-party integrations, optimized SQL queries and resolved production incidents with QA and frontend teams.',
+      tech: ['PHP', 'Magento 2', 'MySQL', 'JavaScript', 'Docker', 'Git'],
       website: 'https://www.sqli.com'
     },
     {
       company: 'Batha Auto · Internship',
-      title: 'Full-Stack Developer Intern',
+      title: 'Backend Developer Intern',
       start: '2021-07',
       end: '2021-09',
       summary:
-        'Delivered an internal system that tracks invoices, supplier accounts, payment deadlines, and chassis data, replacing manual spreadsheets and speeding up look-ups.',
-      tech: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS']
+        'Designed and developed an internal Laravel application for managing invoices, suppliers, payment deadlines and vehicle chassis information, replacing spreadsheet-based workflows with a centralized solution.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS']
     }
   ],
 
-  education: <EducationItem[]>[
+  education: [
     {
       start: '2019',
       end: '2022',
@@ -136,86 +120,93 @@ export const resume = {
     }
   ],
 
-  techSkills: <SkillGroup[]>[
+  techSkills: [
     {
-      title: 'Full-Stack Web Development',
-      description: 'Designing and building modern web applications and APIs.',
+      title: 'Backend Development',
+      description:
+        'Building scalable PHP applications, REST APIs and business systems with clean architecture and maintainable code.',
       tags: [
-        'Magento 2',
-        'Laravel 11',
         'PHP 8',
-        'TypeScript',
-        'React.js',
-        'Next.js',
-        'Vue 3',
-        'Tailwind CSS',
+        'Laravel 11',
+        'Lumen',
+        'Magento 2',
         'REST APIs',
         'MySQL',
+        'Redis',
+        'SQL',
+        'MVC',
         'Docker'
       ]
     },
     {
-      title: 'Application Support & Maintenance',
+      title: 'Software Quality & Performance',
       description:
-        'Troubleshooting issues, refactoring code, improving queries and automating routine tasks.',
-      tags: ['Debugging', 'Refactoring', 'Query Optimisation', 'Code Review', 'New Relic']
+        'Troubleshooting production issues, improving application performance and maintaining reliable software through automated tests and code review.',
+      tags: [
+        'PHPUnit',
+        'Pest',
+        'Debugging',
+        'Query Optimisation',
+        'Code Review',
+        'Refactoring'
+      ]
     },
     {
-      title: 'Algorithmic Problem Solving',
+      title: 'Databases & Caching',
       description:
-        'Solving tough problems with efficient algorithms and data structures.',
-      tags: [
-        'Algorithms',
-        'Data Structures',
-        'Math',
-        'Optimisation Methods',
-        'Competitive Programming'
-      ]
+        'Modeling relational schemas, tuning queries and using caches and queues to keep applications fast under load.',
+      tags: ['MySQL', 'Redis', 'Indexing', 'Query Plans', 'Message Queues']
+    },
+    {
+      title: 'Problem Solving',
+      description:
+        'Applying algorithms, data structures and analytical thinking to design efficient software solutions.',
+      tags: ['Algorithms', 'Data Structures', 'Optimization', 'Analytical Thinking']
     }
   ],
 
-  projects: <ProjectItem[]>[
+  projects: [
     {
-      name: 'Skill-Up (Framework)',
-      stage: 'WIP', // ongoing framework
+      name: 'Backend Engineering Lab',
+      stage: 'WIP',
       description:
-        'A structured “level-up” framework of small, practical projects to master backend fundamentals. Includes shipped exercises (HTTP/CORS, sessions/cookies auth mini-app, WebSocket open chat) and larger projects (FileImporter, Inventory API + CLI).',
+        'A structured backend learning framework covering PHP internals, HTTP, authentication, REST design and real-time systems. Includes completed exercises (HTTP/CORS sandbox, session/cookie auth, WebSocket chat) and larger projects such as FileImporter and an event-sourced inventory REST API with CLI client.',
       repo: 'https://github.com/Ben-Fatima/skill-up',
-      tech: ['PHP', 'Javascript', 'SQL', 'Lumen', 'REST', 'CLI', 'WebSockets']
+      tech: ['PHP', 'JavaScript', 'SQL', 'Lumen', 'REST', 'CLI', 'WebSockets']
     },
     {
-      name: 'FileImporter (Skill-Up Project 1)',
+      name: 'FileImporter',
       stage: 'Done',
       description:
-        'Imports a large CSV (500MB+) into SQLite using a streaming approach. Includes a web UI with chunked uploads (~10MB parts), async import execution, live progress polling, and an actionable error report for failed rows.',
+        'High-performance CSV importer capable of processing files larger than 500 MB using a streaming approach to minimize memory usage. Supports chunked uploads, asynchronous processing, live progress tracking and detailed validation reports.',
       repo: 'https://github.com/Ben-Fatima/skill-up/tree/file-importer',
       tech: [
-        'PHP (Vanilla)',
+        'PHP',
         'SQLite',
-        'Composer (PSR-4)',
+        'Composer',
+        'PSR-4',
         'Filesystem',
-        'Chunked Upload',
-        'Progress Polling',
+        'Chunk Upload',
         'Tailwind CSS',
-        'Vanilla JS'
+        'Vanilla JavaScript'
       ]
     },
     {
-      name: 'Inventory REST API + CLI (Skill-Up Project 2)',
+      name: 'Inventory REST API + CLI',
       stage: 'WIP',
       description:
-        'Multi-location inventory system where stock is derived from movements (IN/OUT/ADJUST). REST API (Lumen) plus a PHP CLI client that consumes the API to manage products, locations, and stock movements.',
+        'Event-sourced inventory system where stock levels are derived from immutable movements (IN/OUT/ADJUST) rather than mutated directly. Exposes a Lumen REST API and a PHP CLI client for managing products, warehouses and stock movements across multiple locations.',
       repo: 'https://github.com/Ben-Fatima/skill-up',
-      tech: ['Lumen', 'PHP', 'REST API', 'CLI', 'SQLite']
+      tech: ['PHP', 'Lumen', 'REST API', 'CLI', 'SQLite']
     },
     {
-      name: 'Portfolio Site',
-      stage: 'α', // alpha release
+      name: 'Portfolio Website',
+      stage: 'α',
       description:
-        'Personal portfolio built with Next.js and Tailwind CSS (fatimazahra.dev).',
+        'Personal portfolio showcasing professional experience and backend projects. Built with Next.js, TypeScript and Tailwind CSS.',
       repo: 'https://github.com/Ben-Fatima/Portfolio',
       demo: 'https://www.fatimazahra.dev',
-      tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel Deploy']
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel']
     }
   ]
 } satisfies Resume;

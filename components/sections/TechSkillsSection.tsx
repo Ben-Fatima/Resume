@@ -18,7 +18,7 @@ export default function TechSkillsSection({
       {skills.map(({ title, description, tags }) => (
         <div
           key={title}
-          className="mb-6 space-y-2 border-b border-zinc-300/60 pb-6 last:mb-0 last:border-none last:pb-0 dark:border-zinc-600/40"
+          className="mb-3 space-y-1.5 border-b border-zinc-300/60 pb-3 last:mb-0 last:border-none last:pb-0 dark:border-zinc-600/40"
         >
           <p className="font-medium" id="skill-title">
             {title}

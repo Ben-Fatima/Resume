@@ -32,7 +32,7 @@ export type EducationItem = {
 
 export type SkillGroup = { title: string; description: string; tags: string[] };
 
-export type Stage = 'WIP' | 'α';
+export type Stage = 'WIP' | 'α' | 'Done';
 
 export type ProjectItem = {
   name: string;
@@ -47,7 +47,7 @@ export type ProjectItem = {
 export interface Resume {
   labels: { experience: string; education: string; skills: string; projects: string };
   basics: Basics;
-  ranks: Rank[];
+  ranks?: Rank[];
   contact: Contact;
   languages: Language[];
   tools: ToolCategory[];

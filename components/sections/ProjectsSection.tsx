@@ -18,7 +18,7 @@ export default function ProjectsSection({
       {projects.map((project) => (
         <div
           key={project.name}
-          className="mb-4 border-b border-zinc-300/60 
+          className="mb-2 border-b border-zinc-300/60 
                      last:mb-0 last:border-none last:pb-0
                      dark:border-zinc-600/40"
         >
